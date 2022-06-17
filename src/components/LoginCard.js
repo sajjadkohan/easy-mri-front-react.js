@@ -16,33 +16,39 @@ import { pushUserInfo } from '../redux/user/userAction';
 
 const LoginCard = () => {
 
-    const [userInfoState,setUserInfoState] = useState();
+    const [userInfoState,setUserInfoState] = useState("sdddddddd");
 
-    const dispath = useDispatch();
+    const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
 
     const [loginState,setLoginState] = useState({
-        nationalCode : "",
-        password : ""
+        nationalCode : "1234567890",
+        password : "123456"
     });
 
 
     const login = async () => {
         
          await axios.post("http://localhost:5000/user/login",loginState)
-         .then( response => {
+         .then(async response => {
              const userInfo = response.data
-             setUserInfoState(userInfo)
-             console.log("State>>>>",userInfoState);
              const success = response.data.success;
+             
+            //  dispatch(pushUserInfo(userInfo));
 
-            const userPushDipath = () => {
-                dispath(pushUserInfo(userInfoState))
-            };
-            userPushDipath()
+//             function userPushDipath () {
+                
+//             };
+// ;
+//             userPushDipath();
 
+
+            (function(){
+                dispatch(pushUserInfo(userInfo))
+                })();
+                
              setTimeout(() => {
                 success && navigate("/userinfo");
              }, 1500);

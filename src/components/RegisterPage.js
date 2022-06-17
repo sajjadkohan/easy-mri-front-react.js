@@ -10,9 +10,6 @@ import MriInfo from './MriInfo';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from '@material-ui/core';
-
-import ContextProvider from './ContextProvider';
-
 // toaster
 import toast, { Toaster } from 'react-hot-toast';
 

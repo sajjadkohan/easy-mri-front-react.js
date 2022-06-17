@@ -7,7 +7,6 @@ import RegisterPage from './components/RegisterPage';
 import RegisterUserPage from './components/auth/RegisterUserPage';
 import Footer from './components/Footer';
 import Products from './components/Products';
-import Header from './components/Header';
 import IndexPage from './components/IndexPage';
 
 // REDUX
@@ -22,7 +21,6 @@ function App() {
 
     <div className="App">
       <Provider store={store}>
-      <Header/>
       <Routes>
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/register" element={<RegisterUserPage/>} />

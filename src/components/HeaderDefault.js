@@ -1,32 +1,14 @@
-import React, { useState , useEffect } from 'react';
+import React from 'react';
 import styles from "./styles/Header.module.css";
 import { Link } from 'react-router-dom';
 import hospitalImage from './images/icons/hospital.png'
 import { ButtonBase , Button } from '@material-ui/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { pushUserInfo, testAction } from '../redux/user/userAction';
-import { useSelector , useDispatch } from 'react-redux';
 
 
-const Header = () => {
 
+const HeaderDefault = () => {
 
-    const state = useSelector(state => state.userInfo);
-    const dispatch = useDispatch();
-    const [myName,setMyName] = useState("SAJJAD KOHAN");
-
-    useEffect(() => {
-        
-        
-        // (function(){
-        //     dispatch(pushUserInfo(state.userInfo.user.first_name))
-        //     })();
-    }, [])
-    
-    const {first_name , last_name} = state.userInfo.user
-
-
-// console.log(state);
 
     return (
         <div className={styles.header}>
@@ -47,7 +29,7 @@ const Header = () => {
             <div className={styles.info}>
                 <Button className={styles.btnLogin}  >
                     <Link to="/login">
-                    <span>{first_name} {last_name}</span>
+                    <span>ورود</span>
                     <FontAwesomeIcon icon="user" />
                     </Link>
                 </Button>
@@ -57,4 +39,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default HeaderDefault;

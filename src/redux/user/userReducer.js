@@ -1,7 +1,7 @@
 const initialState = {
+    userInfo : {},
     first_name : "",
     loading : false,
-    userInfo : [],
     error: ""
 }
 
@@ -9,7 +9,7 @@ const userReducer = (state = initialState,action)=>{
     switch(action.type){
         case "TEST" :
             return {
-                first_name : state.first_name = action.payload
+                first_name :action.payload
             }
 
             case "GET_USER_REQUEST" :
