@@ -1,0 +1,21 @@
+.mriReport{border: 1px solid rgb(141, 141, 141);width: 49%;display: flex;border-radius: 5px;overflow: hidden}
+.title{width: 43%;border-right: 1px solid #ccc;}
+.subTitle{width: 40%;}
+.downLoad{width: 17%;background: #0085c7;color: #fff;display: flex;align-items: center;transition: 0.3s all;}
+.downLoad:hover{background: #0070a8;cursor: pointer;}
+.downLoad .fadownload {max-width: 50%;display: block;margin: auto;font-size: 22px;}
+.downLoad span{font-size: 11px;font-weight: 700;font-family: 'Trebuchet MS', 'Lucida Sans Unicode';}
+.part1{background: #fff;padding: 4px 0px;height: 34%;display: flex;justify-content: center;align-items: center;}
+.part1:nth-child(odd){background: #ededed;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;}
+.part1 .stickynote {max-width: 50px;font-size: 42px;}
+.subTitle .part1 span{text-transform: uppercase;}
+.part1 .date{font-family: 'Trebuchet MS', 'Lucida Sans Unicode';}
+.downLoadDiv{width: 100%;}
+a{color: white;text-decoration: none;}
+a:hover{color: white;text-decoration: underline;}
+@media(max-width:767px){
+    .mriReport{width: 100%;margin-top: 11px;}
+    .part1 img {max-width: 15%;}
+    .part1{padding: 14px 0px;}
+    .downLoad span{font-size: 10px;}
+}

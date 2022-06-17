@@ -1,0 +1,24 @@
+.infoCard{max-width: 90%;margin: auto;border: 1px solid #ccc;padding: 3px;
+    box-shadow: 0px 0px 5px rgb(225, 225, 225);background: #fbfbfb;border-radius: 8px;}
+.userImage{width: 33%;display: block;margin: 16px auto;}
+.btnExit{background-color: #c00000!important;color: #fff!important;position: relative;top: 8px;padding: 5px 20px 5px 20px !important;
+    border-radius: 6px;box-shadow: 0px 0px 3px #8e8e8e;transition: .4s all!important;font-family: inherit!important;}
+.textLeft{width: 100%;text-align: left;padding-left: 10px;float: left;}
+.exitImage{position: relative;right: 4px;font-size: 19px;top: 0px;}
+.top h4{font-size: 19px;color: #6e6e6e;margin-bottom: 25px;}
+.ulInfo{padding: 0px;margin-bottom: -3px;}
+.ulInfo li {
+    list-style: none;display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 22px 0px;
+    margin-bottom: 0px;
+    padding: 8px 2px;
+    background: #fff;
+}
+
+.ulInfo li h4{margin-bottom: 0px;direction: ltr;font-size: 19px;color: #5f5f5f;}
+@media(max-width:767px){
+    .infoCard{max-width: 100%;}
+}

@@ -1,0 +1,7 @@
+.errorMsgInput{
+    position: absolute;
+    left: 10px;
+    top: -12px;
+    width: auto;
+    color: red;
+}

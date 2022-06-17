@@ -1,0 +1,29 @@
+.mriCard{border: 1px solid rgb(141, 141, 141);width: 49%;display: flex;border-radius: 5px;overflow: hidden;font-family: 'Trebuchet MS', 'Lucida Sans Unicode';}
+.title{width: 31%;border-right: 1px solid #ccc;}
+.subTitle{width: 52%;}
+.downLoad{width: 17%;background: #0085c7;color: #fff;display: flex;align-items: center;transition: 0.3s all;}
+.downLoad:hover{background: #0070a8;cursor: pointer;}
+.downLoad .fadownload {max-width: 50%;display: block;margin: auto;font-size: 22px;}
+.downLoad span{font-size: 11px;font-weight: 700;}
+.part1{background: #fff;padding: 4px 0px;}
+.part1:nth-child(odd){
+    background: #ededed;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.downLoadDiv{width: 100%;}
+
+.subTitle .part1 span{text-transform: uppercase;}
+a{color: white;text-decoration: none;}
+a:hover{color: white;text-decoration: underline;}
+
+@media(max-width:767px){
+    .mriCard{width: 100%;}
+    .title{border-right: 2px solid #ccc;}
+    .downLoad span{font-size: 10px;}
+}
+
+
+
+
+

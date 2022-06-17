@@ -1,0 +1,49 @@
+.indexPage .box{
+    padding: 10px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50px;
+    background: #0085c7;
+    box-shadow: 20px 20px 60px #bebebe, 0px 0px 40px #def5ff inset;
+  color: #fff;
+  padding: 70px 0px;
+  outline: 3px solid #ffffff61;
+  outline-offset: -18px;
+  transition: 0.2s all;
+}
+.indexPage .box:hover{
+  transform: translateY(-10px);
+  box-shadow: 20px 20px 60px #bebebe, 0px -4px 0px 13px #4aaad9 inset;
+  outline-offset: -13px;  
+}
+
+.indexPage .smile{
+  margin: 39px auto 30px auto;
+  width: 600px;
+  height: 30px;
+  border-radius: 50px;
+  background: #0085c7;
+  box-shadow: 20px 20px 60px #bebebe, 0px 0px 23px #def5ff inset;
+  color: #fff;
+  outline: 3px solid #ffffff36;
+  outline-offset: -10px;
+}
+.box .text{font-size: 28px;}
+.box .icon{font-size: 33px;margin-top: 20px;}
+
+.parrentBox{
+    justify-content: space-evenly;
+    max-width: 622px;
+    margin: 40px auto;
+  }
+
+  .indexPage.container-fluid{
+    padding: 30px 20px;
+  }
+
+  .indexPage .imgIcon{
+    width: 55px;
+  }
+
+.indexPage .box a{display: block;}
+.indexPage .box a:hover{text-decoration: none;}

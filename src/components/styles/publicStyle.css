@@ -1,0 +1,32 @@
+.container{
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: auto;
+}
+
+.container-fluid{
+    max-width: 95%;
+    padding: 0px 15px;
+    margin: auto;
+}
+
+.d-flex{display: flex;}
+
+
+
+.p-top-50{padding-top: 50px}
+
+.anim{
+    animation: leftToCenter 0.5s -0.2s ease-in-out;
+}
+
+@keyframes leftToCenter {
+    0% {transform: translateX(-200%);-webkit-transform: translateX(-200%)};
+    100% {transform: translateX(0%);-webkit-transform: translateX(0%)};
+}
+
+.disabled{
+    background-color: rgb(117, 117, 117)!important;
+    box-shadow: none!important;opacity: 0.3;cursor: none;}
+    .disabled:hover{transform: none!important;}
+    .disabled a{cursor: none;}

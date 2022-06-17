@@ -1,0 +1,67 @@
+.products *{transition: 0.3s all;}
+.products{background: #F1F4F7;}
+.rightDiv{width: 30%;border-left: 1px solid #ccc;padding: 10px;position: relative;background: #fff;}
+.leftDiv{width: 70%;padding: 10px;}
+.leftDiv2{width: 100%;padding: 10px;}
+.container{display: flex;direction: rtl;}
+.hRow{width: 90%;height: 1px;background: #c4c4c496;margin: 30px auto;}
+.padding145{padding: 145px;}
+
+@media(max-width:767px){
+    .leftDiv{width: 100%;padding: 0px;}
+    .rightDiv{
+        width: 85%;
+        border-left: 1px solid #cbcbcb;
+        padding: 10px;
+        position: absolute!important;
+        background: #eaeaea;
+        transition: 0.4s all;
+        height: 100%;
+        z-index: 7;
+    }
+    /* .products::before{content:"";width: 100%;height: 122%;position: absolute;
+        display: block;z-index: 2;
+        background: rgba(34, 34, 34, 0.466);
+        right: 50%;
+        top: -10%;
+    } */
+    .menuBtn {top: 188px!important;}
+}
+
+.rightDivOn{
+    width: 85%;border-left: 1px solid #cbcbcb;padding: 10px;position: absolute;
+    background: #eaeaea;display: block;transform: translateX(0%);transition: 0.4s all;z-index: 7;
+}
+
+.menuBtn{
+    position: absolute;right: 42px;top: 42px;border: 1px solid #ccc;
+    border-radius: 4px;padding: 3px;transition: .4s all;z-index: 7;width: 40px;
+    height: 33px;
+}
+    .menuBtnTrue{
+    position: absolute;right: 46px;top: -77px;border: 1px solid #ccc;
+    border-radius: 4px;padding: 3px;transition: .4s all;width: 40px;
+    height: 33px;
+}
+
+.menuBtn:hover{background: #005580;border-color: #007cb9;cursor: pointer;}
+.menuBtnTrue:hover{background: #005580;border-color: #007cb9;cursor: pointer;}
+.line{width: 21px;margin: 4px auto;height: 2px;background: #fff;display: block;transition: 0.3s all;}
+.line1{width: 21px;margin: 4px auto;height: 2px;background: #fff;display: block;transition: 0.3s all;
+    transform: rotate(36deg);position: relative;top: 8px;
+}
+.line2{width: 21px;margin: 4px auto;height: 2px;background: #fff;display: block;transition: 0.3s all;
+    transform: rotate(-36deg);position: relative;top: 2px;
+}
+
+.line:last-child{width: 16px;margin: 2px 6px;}
+.dNone{display: none;}
+.widthZero{width: 0%;border: none;padding: 0px;}
+/* @keyframes show {
+    0%{transform: translateX(64%);}
+    100%{transform: translateX(0%);}
+} */
+
+
+
+

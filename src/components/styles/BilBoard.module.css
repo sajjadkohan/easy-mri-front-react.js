@@ -1,0 +1,38 @@
+.bilBoard{
+border: 1px solid #00000038;
+width: 93%;
+margin: auto;
+padding: 10px;
+background: #fbfbfb;
+border-radius: 8px;
+box-shadow: 0px 0px 4px #89898929;
+direction: initial;
+display: flex;
+justify-content: space-around;
+}
+
+@media(max-width:767px){
+    .bilBoard{
+        border: 1px solid #00000038;
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        background: #fbfbfb;
+        border-radius: 0px;
+        box-shadow: 0px 0px 4px #89898929;
+        direction: initial;
+        display: block;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+

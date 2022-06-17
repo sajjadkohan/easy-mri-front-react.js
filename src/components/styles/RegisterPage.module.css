@@ -1,0 +1,123 @@
+@font-face {
+    src: url(../fonts/IRANYEKANWEBBOLD.TTF) format('woff');
+    font-family: "IRANYEKANWEBBOLD";
+  }
+
+  @font-face {
+      src: url(../fonts/IRANYEKANWEBLIGHT.TTF) format('woff');
+      font-family: "IRANYEKANWEBLIGHT";
+    }
+
+
+.bodyRegister{transition: 0.3all;animation: leftToCenter 0.5s -0.2s ease-in-out;background: #F1F4F7;padding-bottom: 20px;}
+.personInfo{border: 1px solid #ccc;padding: 8px;
+  border-radius: 15px;
+background: #fff;
+max-width: 800px;
+margin: auto;}
+.mriInfo{border: 1px solid #ccc;padding: 8px; border-radius: 2px 15px 2px 2px;background: #fff;height: 100%;position: absolute;width: 100%;}
+.container{display: flex;justify-content: center;padding-top: 40px;}
+.PersonInfoRight{width: 43%;margin: 10px 7px;}
+.mriInfoLeft{width: 43%;margin: 10px 7px;position: relative;}
+.hrow{width: 80%;margin: 10px auto;height: 1pt;background: rgb(220, 220, 220);}
+.titleH{margin: 5px auto;font-family: "IRANYEKANWEBBOLD";}
+.subTitle{font-family: "IRANYEKANWEBBOLD";float:right;}
+.inputNameDiv{width: 70%;border: 1px solid #ccc;border-radius: 4px;}
+.inputNameDivTwo{width: 70%;border: 1px solid #ccc;border-radius: 4px;
+  background: rgba(240, 240, 240, 0.32);float: left;height: 28px;}
+.inputNameDivTwoo{border: none;background: rgba(240, 240, 240, 0.32);}
+.inputNameDivTwoo:focus{border: 1px solid #ccc!important;}
+
+
+@keyframes leftToCenter {
+  0% {transform: translateX(-200%);-webkit-transform: translateX(-200%)};
+  100% {transform: translateX(0%);-webkit-transform: translateX(0%)};
+}
+.errorInput{width: 70%;border: 1px solid #ff5959;border-radius: 4px;background: rgba(255, 204, 204, 0.32);}
+
+.nameDiv{width: 66%;margin: 35px auto;display: block;justify-content: space-around;padding: 15px 10px;border-radius: 4px;position: relative;}
+
+.spanRadio{margin-left: 20px;font-family: "IRANYEKANWEBLIGHT";}
+.radio{border: 1px solid #ccc;width: 14px;height: 14px;border-radius: 50%;display: inline-block;}
+.radioCheked{border: 1px solid #ccc;width: 14px;height: 14px;border-radius: 50%;display: inline-block;background: black;}
+.btnSave{background: rgb(0, 146, 83) !important;color: #fff !important;font-family: inherit !important;}
+.textErrorShow{
+  display: inline-block;
+  color: rgba(217, 0, 0, 0.55);
+  position: absolute;
+  right: 32%;
+  font-size: 14px;
+  background: #ffbbbb70;
+  width: 200px;
+  border-radius: 8px;
+  bottom: 31px;
+  left: -223px;
+}
+
+.textErrorHide{
+  display: none!important;
+
+}
+
+.textErrorShow::after{
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  left: 95px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid #ffbbbb4d;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+
+.btnSave > span > svg{margin-left: 10px;}
+.radioDiv{border-radius: 100%;border: 1px solid #000;width: 20px;height: 20px;display: inline-block;transition: 0.4s all;}
+.radioDivActive{border-radius: 100%;box-shadow: 0px 0px 0px 5px #298af9 inset;border: 1px solid #298af9;width: 20px;height: 20px;display: inline-block;transition: 0.4s all;}
+
+.infoBtnParrent{position: absolute;left: -10px;}
+
+
+.infoBtn{
+  width: 23px;
+  position: absolute;
+  left: -29px;
+  color: #b5b5b5;
+  border-radius: 50%;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid #13121217;
+  top: 0px;
+  background: #00000014;
+  font-weight: bold;
+  transition: 0.2s all;
+  
+}
+.infoBtn:hover{opacity: 0.5;}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media(max-width:767px){
+  .container {display: block;}
+  .PersonInfoRight {width: 100%;margin: 10px 0px;}
+  .mriInfoLeft {width: 96%;margin: 10px 5px;}
+  .mriInfo{height: 100%;position: relative;width: 100%;}
+}
+
