@@ -31,10 +31,16 @@ const getUserRequestFailure = (error)=> {
     }
 }
 
+const loginer = ()=> {
+    return {
+        type: "SET_LOGIN"
+    }
+}
+
 const getUser = ()=> {
     return (dispath) => {
     
-        dispath(getUserRequest);
+        dispath(getUserRequest());
         axios.get("http://localhost:5000/user/list")
         .then(response => {
             const user = response.data.allUsers;
@@ -48,9 +54,30 @@ const getUser = ()=> {
     }
 }
 
+
+const autoLogin = ()=> {
+    return (dispath) => {
+        const tokenValue = localStorage.getItem("token");
+        dispath(getUserRequest);
+        axios.post("http://localhost:5000/user/access-token",{"token":tokenValue})
+        .then(response => {
+            const user = response.data.user;
+            console.log(user);
+            
+            dispath(getUserRequestSuccess(user))
+        })
+        .catch((err)=> {
+            dispath(getUserRequestFailure(err))
+        })
+
+    }
+}
+
 export {
     testAction,
     getUser,
-    pushUserInfo
+    pushUserInfo,
+    loginer,
+    autoLogin
 }
 

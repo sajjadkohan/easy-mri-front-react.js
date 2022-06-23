@@ -11,7 +11,7 @@ import { useSelector , useDispatch } from 'react-redux';
 const Header = () => {
 
 
-    const state = useSelector(state => state.userInfo);
+    // const state = useSelector(state => state.userInfo);
     const dispatch = useDispatch();
     const [myName,setMyName] = useState("SAJJAD KOHAN");
 
@@ -23,7 +23,7 @@ const Header = () => {
         //     })();
     }, [])
     
-    const {first_name , last_name} = state.userInfo.user
+    // const {first_name , last_name} = state.userInfo.user
 
 
 // console.log(state);
@@ -33,7 +33,6 @@ const Header = () => {
             <div className={styles.nav}>
                 <ul>
                     <li><Link to="/">صفحه نخست</Link></li>
-                    <li><Link to="/register">ثبت نام</Link></li>
                     <li><Link to="/">بررسی اطلاعات</Link></li>
                     <li><Link to="/">درباره ما</Link></li>
 
@@ -47,7 +46,7 @@ const Header = () => {
             <div className={styles.info}>
                 <Button className={styles.btnLogin}  >
                     <Link to="/login">
-                    <span>{first_name} {last_name}</span>
+                    {/* <span>{first_name} {last_name}</span> */}
                     <FontAwesomeIcon icon="user" />
                     </Link>
                 </Button>

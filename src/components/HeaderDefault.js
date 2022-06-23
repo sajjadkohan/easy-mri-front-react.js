@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./styles/Header.module.css";
+import './styles/publicStyle.css'
 import { Link } from 'react-router-dom';
 import hospitalImage from './images/icons/hospital.png'
 import { ButtonBase , Button } from '@material-ui/core';
@@ -27,12 +28,20 @@ const HeaderDefault = () => {
                 </Link>
             </div>
             <div className={styles.info}>
-                <Button className={styles.btnLogin}  >
-                    <Link to="/login">
-                    <span>ورود</span>
-                    <FontAwesomeIcon icon="user" />
-                    </Link>
+
+                    <Link to="/uploadfile">
+            <Button className={styles.btnUpReport}  >
+                    <span>آپلود فایل</span>
+                    <FontAwesomeIcon icon='file' />
                 </Button>
+                    </Link>
+
+                    <Link className='link' to="/login">
+                <Button className={styles.btnUpFile}  >
+                    <span>آپلود گزارش</span>
+                    <FontAwesomeIcon icon='book-open' />
+                </Button>
+                    </Link>
             </div>
 
         </div>

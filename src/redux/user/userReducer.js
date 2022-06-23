@@ -1,6 +1,6 @@
 const initialState = {
+    isLogin : false,
     userInfo : {},
-    first_name : "",
     loading : false,
     error: ""
 }
@@ -22,13 +22,13 @@ const userReducer = (state = initialState,action)=>{
             case "GET_USER_REQUEST_SUCCESS" :
                 return {
                     loading : false,
-                    user : action.payload
+                    userInfo : action.payload
                 }
 
                 case "GET_USER_REQUEST_FAILURE" :
                     return {
                         loading : false,
-                        user : [],
+                        userInfo : [],
                         error : action.payload
                     }
 
@@ -36,6 +36,11 @@ const userReducer = (state = initialState,action)=>{
                 return {
                     loading : false,
                     userInfo : action.payload
+                }
+
+                case "SET_LOGIN" : 
+                return {
+                    isLogin : true
                 }
 
         default:

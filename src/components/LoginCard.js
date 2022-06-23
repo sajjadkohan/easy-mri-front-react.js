@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import styles from './styles/LoginPage.module.css'
+import "./styles/publicStyle.css"
 import imagephome from './images/icons/smartphone(1).png';
 import imagelock from './images/icons/padlock(1).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,14 +12,15 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 // REDUX
-import { useDispatch } from 'react-redux';
-import { pushUserInfo } from '../redux/user/userAction';
+import { useDispatch , useSelector } from 'react-redux';
+import { loginer, pushUserInfo } from '../redux/user/userAction';
 
 const LoginCard = () => {
 
     const [userInfoState,setUserInfoState] = useState("sdddddddd");
 
     const dispatch = useDispatch();
+    const user = useSelector(state => state.userInfo)
 
     const navigate = useNavigate();
 
@@ -35,30 +37,31 @@ const LoginCard = () => {
          .then(async response => {
              const userInfo = response.data
              const success = response.data.success;
+
              
-            //  dispatch(pushUserInfo(userInfo));
-
-//             function userPushDipath () {
-                
-//             };
-// ;
-//             userPushDipath();
-
-
-            (function(){
-                dispatch(pushUserInfo(userInfo))
+            (function (){
+                dispatch(pushUserInfo(userInfo));
                 })();
-                
-             setTimeout(() => {
-                success && navigate("/userinfo");
-             }, 1500);
+
+            localStorage.setItem("token",userInfo.user.token)
+            localStorage.setItem("refreshToken",userInfo.RefreshToken)
+
+            let fullName = userInfo.user.first_name + " " + userInfo.user.last_name
+            
+            toast.success(`خوش امدید ${fullName} : کاربر `)
+
+                // success && navigate("/userinfo");
 
          })
          .catch(err => {
 
-            const errMsg = err.response.data.messages
-            console.log(errMsg);
-            toast.error(Object.entries(errMsg))
+            // const errMsg = err.response.data?.errors.message;
+            // const errNtCode = err.response.data?.errors.nationalCode;
+
+            console.log(err.response.data);
+            // toast.error(errMsg);
+            // toast.error(errNtCode);
+
          })
      }
 
@@ -74,7 +77,7 @@ const LoginCard = () => {
     return (
         <div>
             <Toaster/>
-        <div className={styles.loginCard}>
+        <div className="loginCard">
 
             <div className={styles.headerTopDiv}>صفحه ورود</div>
             <div className={styles.bodyDiv}>

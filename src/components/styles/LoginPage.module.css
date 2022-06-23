@@ -2,7 +2,7 @@
 .bodyLogin{background: #F1F4F7;padding: 10px;}
 .loginCard{
     border: 1px solid #ccc;
-    max-width: 460px;
+    width: 370px;
     margin: 10% auto;
     border-radius: 6px;
     background: #fff;

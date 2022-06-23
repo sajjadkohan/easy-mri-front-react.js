@@ -40,24 +40,26 @@ const IndexPage = () => {
         {/* <div className='smile'></div> */}
 
         <div className='parrentBox d-flex'>
-            <div className='box disabled'>
+            <div className='box'>
                 <Link to="/login">
-                <div className='text'>ورود</div>
+                <div className='text'>اپلود فایل MRI</div>
                 <div className='icon'>
                     <span>
-                    {/* <FontAwesomeIcon icon='user' /> */}
-                    <img className='imgIcon' src={loginIcon} />
+                    <FontAwesomeIcon icon='file' />
+                    {/* <img className='imgIcon' src={loginIcon} /> */}
 
                     </span>
                 </div>
                 </Link>
             </div>
-            <div className='box disabled'>
+            <div className='box'>
              <Link to="/register">
-                <div className='text'>ثبت نام</div>
+                <div className='text'>آپلود گزارش MRI</div>
                 <div className='icon'>
                     <span>
-                    <img className='imgIcon' src={registerIcon} />
+                    <FontAwesomeIcon icon='book-open' />
+
+                    {/* <img className='imgIcon' src={registerIcon} /> */}
                     </span>
                 </div>
                 </Link>
